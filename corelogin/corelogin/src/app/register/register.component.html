@@ -1,0 +1,31 @@
+<div style="padding-top: 2rem;margin-left: 50%;"></div>
+<br>
+<label>email</label>
+<input [(ngModel)]="newregister.Email" type="text">
+<br>
+<br>
+<label>password</label>
+<input [(ngModel)]="newregister.Password" type="text">
+<br>
+
+<br>
+<label>nickname</label>
+<input [(ngModel)]="newregister.NickName" type="text">
+<br>
+<br>
+<label>surname</label>
+<input [(ngModel)]="newregister.Surname" type="text">
+<br>
+<br>
+<label>firstname</label>
+<input [(ngModel)]="newregister.FirstName" type="text">
+<br>
+<br>
+<label>username</label>
+<input [(ngModel)]="newregister.UserName" type="text">
+<br>
+<button (click)="register()">submit</button>
+
+<div *ngIf="showError" class="alert alert-danger" role="alert">
+    <span [innerHTML]="errorMessage"></span>
+</div>

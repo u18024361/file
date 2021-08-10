@@ -1,0 +1,53 @@
+
+    <div >
+      <input type="file" #file placeholder="Choose file" (change)="content($event)" >
+     
+    </div>
+   
+<button (click)="x()">submit</button>
+
+<div style="background-color: blue;" >
+  <input type="file" #file placeholder="Choose file" (change)="Test($event)" >
+ 
+</div>
+<br>
+<br>
+<div style="margin-left: 10rem;">
+  <tr>
+    <th>code</th>
+    <th>resourceName</th>
+    <th>resourceDescription</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let item of studentList">
+    <td style="text-align: center;">{{ item.module.moduleCode }}</td>
+    <td style="text-align: center;">{{ item.resourceName }}</td>
+    <td style="text-align: center;">{{ item.resourceDescription}}</td>
+    <td>
+      <button  >Edit</button>
+    </td>
+    <td>
+      <button  (click)="download(item.id)" >download</button>
+    </td>
+  </tr>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<h1>TutorApplication</h1>
+<input style="background-color: blue;" type="file" (change)="ApplicationFile($event)">
+<input type="file" (change)="ApplicationImage($event)">
+<button (click)="Application()">submit</button>
+
+<br>
+<br>
+<h1>video</h1>
+<button (click)="video()">video</button>
+<video width="320" height="240" controls [src]="prev_url" >
+  
+ 
+  Your browser does not support the video tag.
+</video>
